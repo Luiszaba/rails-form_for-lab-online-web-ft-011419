@@ -30,13 +30,3 @@ private
     params.require(:student).permit!
   end
 end
-  
-  
-  
-  
-  
-  
-  
-  
-  
-end

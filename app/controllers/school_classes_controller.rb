@@ -1,9 +1,5 @@
-class SchoolClassController < ApplicationController
+class SchoolClassesController < ApplicationController
   
-  
-  def index
-    @classes = SchoolClass.all
-  end
   
   def new
     @class = SchoolClass.new
@@ -32,6 +28,6 @@ class SchoolClassController < ApplicationController
   private
   
   def school_class_params
-    params.require(:school_class).permit!
+    params.require(:classes).permit!
   end
 end
