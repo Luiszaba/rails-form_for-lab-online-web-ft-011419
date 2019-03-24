@@ -2,12 +2,12 @@ class SchoolClassesController < ApplicationController
   
   
   def new
-    @class = SchoolClass.new
+    @school_class = SchoolClass.new
   end
   
   def create
-    @class = SchoolClass.create(school_class_params)
-    @class.save
+    @school_classs = SchoolClass.create(school_class_params)
+    @school_class.save
     redirect_to school_class_path(@class)
   end
     
@@ -16,12 +16,12 @@ class SchoolClassesController < ApplicationController
   end
   
   def edit 
-    @class = SchoolClass.find(params[:id])
+    @school_class = SchoolClass.find(params[:id])
   end
   
   def update
-    @class = SchoolClass.find(params[:id])
-    @class.update(school_class_params)
+    @school_class = SchoolClass.find(params[:id])
+    @school_class.update(school_class_params)
     redirect_to school_class_path(@class)
   end
   
